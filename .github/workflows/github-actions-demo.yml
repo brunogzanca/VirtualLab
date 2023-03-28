@@ -9,16 +9,12 @@ on:
       buildID:
         description: 'BuildID TeamcityProvider'     
         required: true
-        default: 'warning'
-      logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'warning'
+        default: '#000'
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: 'echo "Event TeamcityBuildNumber: ${ { inputs.buildID } }"'
+      - run: echo "Event TeamcityBuildNumber ${{inputs.buildID}}"
         continue-on-error: true
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
