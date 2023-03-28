@@ -6,6 +6,10 @@ on:
       - main
   workflow_dispatch:
     inputs:
+      buildID:
+        description: 'BuildID TeamcityProvider'     
+        required: true
+        default: 'warning'
       logLevel:
         description: 'Log level'     
         required: true
