@@ -6,7 +6,7 @@ on:
       - main
   workflow_dispatch:
     inputs:
-      buildID:
+      artifact_path:
         description: 'BuildID TeamcityProvider'     
         required: true
         default: '#000'
