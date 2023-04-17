@@ -10,26 +10,7 @@ on:
         description: 'BuildID TeamcityProvider'     
         required: true
         default: '#000'
-      approve-pull-request:
-        description: 'pull-request TeamcityProvider'     
-        required: true
-        default: 'reject'
 jobs:
-  block-pull-request:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Build and test
-        run: |
-          # Build the code
-          # Run the tests
-      - name: Wait for input
-        id: approve-pull-request
-        uses: peter-evans/wait-for-input@v1
-        with:
-          prompt: 'Should the pull request be approved?'
-          inputs: 'approve, reject'
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
